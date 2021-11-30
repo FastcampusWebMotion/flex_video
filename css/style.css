@@ -13,4 +13,152 @@ a {
   text-decoration: none;
 }
 
+body {
+  background: #333;
+}
+
+main {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+}
+main header {
+  width: 20%;
+  height: 100%;
+  padding: 10vh 5vw;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: space-between;
+}
+main header h1 {
+  color: #fff;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+}
+main header h1 i {
+  font-size: 5vw;
+  margin-bottom: 15px;
+}
+main header h1 span {
+  width: 100%;
+  text-align: center;
+  font: normal 0.8vw/1 "arial";
+}
+main header p {
+  font: normal 11px/1.2 "arial";
+  color: #888;
+  text-align: center;
+}
+main section {
+  width: 80%;
+  height: 100%;
+  padding-top: 10vh;
+  display: flex;
+}
+main section article {
+  flex: 1;
+  transition: 0.5s;
+  position: relative;
+}
+main section article::before {
+  content: "";
+  display: block;
+  width: 80%;
+  height: 95%;
+  position: absolute;
+  top: 0px;
+  left: -100px;
+  opacity: 0;
+  background: #444;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.1);
+  transition: 1s;
+}
+main section article .inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-between;
+  padding: 50px 30px 100px;
+}
+main section article .inner .txt {
+  padding-top: 90px;
+  transition: 1s;
+}
+main section article .inner .txt h2 {
+  font: normal 2vw/1 "Alegreya Sans SC";
+  color: #fff;
+  margin-bottom: 40px;
+  transition: 1s;
+}
+main section article .inner .txt h2::after {
+  content: "";
+  display: block;
+  width: 40px;
+  height: 2px;
+  background: #777;
+  margin-top: 20px;
+  transition: 1.5s;
+}
+main section article .inner .txt p {
+  font: 14px/1.4 "arial";
+  color: #777;
+}
+main section article .inner figure {
+  width: 100%;
+  height: 15vh;
+  overflow: hidden;
+  position: relative;
+  transition: 0.5s;
+  top: 0px;
+  box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.1);
+  filter: saturate(0.2);
+}
+main section article .inner figure video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+main section article:hover {
+  flex: 1.3;
+}
+main section article:hover::before {
+  left: 0px;
+  opacity: 1;
+}
+main section article:hover .inner .txt {
+  padding-top: 20px;
+}
+main section article:hover .inner .txt h2 {
+  font-size: 5vw;
+}
+main section article:hover .inner .txt h2::after {
+  width: 120px;
+  background: orange;
+}
+main section article:hover .inner figure {
+  height: 20vh;
+  top: 25px;
+  filter: saturate(1.2);
+}
+main nav {
+  position: absolute;
+  top: 4vh;
+  right: 5vw;
+}
+main nav ul {
+  display: flex;
+}
+main nav ul li {
+  margin: 15px;
+}
+main nav ul li a {
+  font-size: 18px;
+  color: #bbb;
+}
+
 /*# sourceMappingURL=style.css.map */
